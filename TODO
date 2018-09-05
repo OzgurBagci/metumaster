@@ -1,0 +1,9 @@
+TODO REMAINING: 7
+- Add the case where there is no new lessons, but the student is in probation to the logic.
+- Write makefile.py script.
+- Write main.py script.
+- Write README.md file.
+- Write brute force algorithm to give all possible results without the possibility of resuming until infinity like in
+    random force algorithm.
+- Take some input for grade distribution and apply it to algorithm(s).
+- Create a better algorithm than brute force algorithm.
