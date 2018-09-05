@@ -1,6 +1,6 @@
 """
 In this file the algorithms are defined which are going to be used while evaluating outcomes for graduation. As of now
-there is only brute force algorithm present. There will be other algorithms with future versions.
+there is only random force algorithm present. There will be other algorithms with future versions.
 """
 
 import random
