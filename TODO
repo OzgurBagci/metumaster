@@ -1,4 +1,4 @@
-TODO REMAINING: 7
+TODO REMAINING: 8
 - Add the case where there is no new lessons, but the student is in probation to the logic.
 - Write makefile.py script.
 - Write main.py script.
@@ -7,3 +7,4 @@ TODO REMAINING: 7
     random force algorithm.
 - Take some input for grade distribution and apply it to algorithm(s).
 - Create a better algorithm than brute force algorithm.
+- One credit lesson less for CGPA, one of them must be non-credit lesson.

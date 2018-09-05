@@ -37,7 +37,7 @@ def random_force(student, new_lessons, graduate_in):
     :return: list(list(Lesson)) || False     # Inner lists represents semesters. False in case of failure.
     """
 
-    grade_list = ['CB', 'CC', 'DC']     # Some grades removed to speed up. Change the passing grades for other tests.
+    grade_list = ['CC', 'DC', 'DD']     # Some grades removed to speed up. Change the passing grades for other tests.
     no_credit_grades = ['S']    # Some grades removed to speed up.
 
     if len(new_lessons) == 0:
@@ -70,9 +70,12 @@ def random_force(student, new_lessons, graduate_in):
                 max_available += 1
 
     add_lessons = []
+    add_in = []
     i = 0
     while i < min(max_lessons, max_available):
         lesson = random.choice(lessons)
+        if len(list(filter(lambda x: lesson.get_code() == x.get_code(), add_in))):
+            continue
         new_lesson = copy.deepcopy(lesson)
         if lesson.get_credit() > 0:
             grade = random.choice(grade_list)
@@ -80,6 +83,7 @@ def random_force(student, new_lessons, graduate_in):
             grade = random.choice(no_credit_grades)
         if student.add_lesson(new_lesson):
             new_lesson.update_grade(grade)
+            add_in.append(new_lesson)
             i += 1
             lessons.remove(lesson)
             if grade in ['FD', 'FF', 'NA', 'U'] and status:
