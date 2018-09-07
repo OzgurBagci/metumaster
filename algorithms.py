@@ -6,8 +6,10 @@ there is only random force algorithm present. There will be other algorithms wit
 import random
 import copy
 import takeinput
+import constants
 
 
+# TODO: REMOVE.
 def call_random_force(student, new_lessons, graduate_in):
     """
     This function calls the real algorithm. Because of the dynamics of the algorithm used, this infinite loop is needed.
@@ -25,6 +27,7 @@ def call_random_force(student, new_lessons, graduate_in):
             return result
 
 
+# TODO: REMOVE.
 def random_force(student, new_lessons, graduate_in):
     """
     - This algorithm, for now, finds only one solution which is not always optimum. Even, most of the time not optimum.
@@ -95,6 +98,21 @@ def random_force(student, new_lessons, graduate_in):
     result = random_force(student, new_lessons, graduate_in - 1)
     if result:
         return result
+
+
+def brute_force(student, new_lessons, graduate_in):
+    """
+    Brute force algorithm to evaluate graduation status in finite amount of time.
+
+    :param student: Student
+    :param new_lessons: list(Lesson)
+    :param graduate_in: int
+    :return: Student
+    """
+
+    status = student.get_status()
+
+    student.new_semester()
 
 
 # Below code is for testing purposes. May be removed from production software. Change algorithms if needed.

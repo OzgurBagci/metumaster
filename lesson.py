@@ -102,3 +102,10 @@ class Lesson:
         """
 
         return self.grade
+
+    def is_non_credit(self):
+        """
+        :return: bool
+        """
+
+        return not bool(self.credit)

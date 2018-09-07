@@ -1,10 +1,12 @@
-TODO REMAINING: 8
-- Add the case where there is no new lessons, but the student is in probation to the logic.
-- Write makefile.py script.
-- Write main.py script.
-- Write README.md file.
-- Write brute force algorithm to give all possible results without the possibility of resuming until infinity like in
+TODO REMAINING: 9, NEXT TODO: AM
+AA - Add the case where there is no new lessons, but the student is in probation to the logic.
+AB - Write makefile.py script.
+AC - Write main.py script.
+AE - Write brute force algorithm to give all possible results without the possibility of resuming until infinity like in
     random force algorithm.
-- Take some input for grade distribution and apply it to algorithm(s).
-- Create a better algorithm than brute force algorithm.
-- One credit lesson less for CGPA, one of them must be non-credit lesson.
+AF - Take some input for grade distribution and apply it to algorithm(s).
+AG - Create a better algorithm than brute force algorithm.
+AH - One credit lesson less for CGPA, one of them must be non-credit lesson for random force algorithm.
+AK - Remove random force function.
+AL - Modify student class get_max_lessons function to give a tuple of credit and non-credit max lessons according to
+    available lessons for student.
