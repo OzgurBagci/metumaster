@@ -1,18 +1,0 @@
-
-<
-takeinput.py,5\6\56c600d2f0a29eb9f3a891bd7f96a13be58eaed4
-9
-	lesson.py,6\d\6d15f76101a4bf8c9c51de22676d40d5d4a11049
-:
-
-student.py,d\7\d72109249d58c6a7a4bcb9b64b5480409e815736
-7
-main.py,f\1\f1bdda93d9a278e358509d498e17d97764c1fb29
-;
-makefile.py,8\6\863aa59fecad192d94586926db0933f36486cb16
-=
-algorithms.py,7\9\7937033ecc9e9974313cf8a4f7ced429b10ae445
-4
-TODO,b\6\b698c11e84460ed5999bfeb5cbf25b865c238f3c
-9
-	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
