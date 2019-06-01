@@ -166,8 +166,8 @@ def take_input():
 # Below code is for testing purposes. May be removed from production software.
 if __name__ == '__main__':
     student, lesson, grad_in = take_input()
-    # Add test cases below. For test cases, you can use classes' internal variables.
-    print('\n\n\nTesting starts...')
+    # Add the algorithm to be used below
+
     print('Lessons the student has taken are going to be printed.')
     for curr in student.lessons:
         for less in curr:

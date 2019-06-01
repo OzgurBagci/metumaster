@@ -5,14 +5,6 @@ graduation.
 
 
 class Student:
-    year = 0    # Since in first year of METU you cannot take classes from upper years it is important.
-    semester = 0    # 1 is Fall, 2 is Spring and 3 is Summer.
-    lessons = []    # Lessons ordered by semester as a nested list.
-    cgpa = -1.0
-    credit = 0
-    status = True   # True for non-probation, False for probation.
-    graduation = False
-
     def __init__(self, year, semester, lessons):
         """
         :param year: int
@@ -23,6 +15,7 @@ class Student:
         self.year = year
         self.semester = semester
         self.lessons = lessons
+        self.credit = 0
 
         lesson_list = []
         former_cgpa = -1.0
@@ -50,6 +43,13 @@ class Student:
 
         if self.status:
             self.graduation = True
+
+    def get_credit(self):
+        """
+        :return: int
+        """
+
+        return self.credit
 
     def new_semester(self):
         """
@@ -156,14 +156,14 @@ class Student:
             return 2
 
         if self.cgpa < 2.0:
-            return 6
+            return 5
         if self.cgpa < 2.5:
-            return 7
+            return 6
         if self.cgpa < 3.0:
-            return 8
+            return 7
         if self.cgpa < 3.5:
-            return 9
-        return 10
+            return 8
+        return 9
 
     def get_semester(self):
         """
