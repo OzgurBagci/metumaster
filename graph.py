@@ -48,8 +48,8 @@ class Graph:
         if len(pres) > 0:
             for pre in pres:
                 try:
-                    id = added_lessons[pre.get_code()]
-                    self.node_dict[self.node_count][1].append(id)
+                    m_id = added_lessons[pre.get_code()]
+                    self.node_dict[self.node_count][1].append(m_id)
                     continue
                 except KeyError:
                     pass

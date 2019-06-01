@@ -3,17 +3,16 @@ In this file the algorithms are defined which are going to be used while evaluat
 there is only random force algorithm present. There will be other algorithms with future versions.
 """
 
-import takeinput
 import constants
 import operator
 
-def brute_force(student, new_lessons, graduate_in):
+
+def brute_force(student, new_lessons):
     """
     Brute force algorithm to evaluate graduation status in finite amount of time.
 
     :param student: Student
     :param new_lessons: list(Lesson)
-    :param graduate_in: int
     :return: Student
     """
 
