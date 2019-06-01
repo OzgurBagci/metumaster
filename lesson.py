@@ -49,7 +49,7 @@ class Lesson:
         :return: bool
         """
 
-        if self.grade in ['AA', 'BA', 'BB', 'CB', 'CC', 'DC', 'DD', 'S', 'EX']:
+        if self.grade in ['AA', 'BA', 'BB', 'CB', 'CC', 'DC', 'DD']:
             return True
         return False
 

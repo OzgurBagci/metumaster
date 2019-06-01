@@ -3,7 +3,6 @@ This script is creating the logic to take the necessary inputs in order to do th
 of graduation.
 """
 
-
 from lesson import Lesson
 from student import Student
 
@@ -21,7 +20,7 @@ def take_input():
 
     while True:
         try:
-            year = int(input('Which year will the evaluation process start? (As a positive integer.):'))
+            year = int(input('Which year will the evaluation process start? (1 for first year, etc.):'))
         except ValueError:
             print('Please use integers.')
             continue
@@ -57,17 +56,6 @@ def take_input():
     else:
         semester -= 1
 
-    while True:
-        try:
-            graduate_in = int(input('How many semesters in which you want to graduate? (As a positive integer.):'))
-        except ValueError:
-            print('Please use integers.')
-            continue
-        if graduate_in <= 0:
-            print('At least one semester is needed.')
-            continue
-        break
-
     lessons = []
     i = 0
     while i < spend_semester:
@@ -84,8 +72,8 @@ def take_input():
                 credit = int(input('How many credits the lesson have? (As a positive integer.):'))
             except ValueError:
                 print('Please use integers.')
-            if credit < 0:
-                print('A neutral credit is needed.')
+            if credit <= 0:
+                print('A positive credit is needed.')
                 continue
             lesson_year = 0
             try:
@@ -160,12 +148,12 @@ def take_input():
             new_lessons.append(Lesson(code, credit, lesson_year, prerequisites, open_semesters))
         break
 
-    return Student(year, semester, lessons), new_lessons, graduate_in
+    return Student(year, semester, lessons), new_lessons
 
 
 # Below code is for testing purposes. May be removed from production software.
 if __name__ == '__main__':
-    student, lesson, grad_in = take_input()
+    student, lesson, = take_input()
     # Add the algorithm to be used below
 
     print('Lessons the student has taken are going to be printed.')
